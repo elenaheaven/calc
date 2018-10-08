@@ -21,7 +21,7 @@ function Display(e) {
 //=  
 function Calc() {
     let val = eval(display.value);
-        if (val === Infinity, val === -Infinity ) {
+        if (val === Infinity || val === -Infinity ) {
         val = 'Do not divide by zero!';
          }
     display.value = val;
