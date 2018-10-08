@@ -1,25 +1,25 @@
 const display = document.querySelector('.display');
 
 document.querySelectorAll('.but')
-    .forEach( el => el.addEventListener('click', Display )); 
+    .forEach( el => el.addEventListener('click', ddisplay )); 
    
 document.querySelector('.clear')   
-    .addEventListener('click', Clear);
+    .addEventListener('click', clear);
     
 document.querySelector('.equal')   
-    .addEventListener('click', Calc); 
+    .addEventListener('click', calc); 
     
 document.querySelector('.backspace')   
-    .addEventListener('click', Back); 
+    .addEventListener('click', back); 
 
 //Виводить цифри на дисплей    
-function Display(e) {
+function ddisplay(e) {
     const button = e.target;
     display.value += button.innerText;
 }
 
 //=  
-function Calc() {
+function calc() {
     let val = eval(display.value);
         if (val === Infinity || val === -Infinity ) {
         val = 'Do not divide by zero!';
@@ -28,11 +28,11 @@ function Calc() {
 }
 
 //С 
-function Clear() {
+function clear() {
     display.value = "";
 }
 
 //<=
-function Back() {
+function back() {
     display.value = display.value.slice(0, -1);
 }
